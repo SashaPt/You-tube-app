@@ -1,0 +1,19 @@
+.error_container {
+    display: flex;
+    align-items: center;
+    margin: 331px auto auto;
+    width: 360px;
+    gap: 27px;
+    .error_img {
+      width: 100px;
+    }
+    .error_text {
+      color: #828282;
+      font-family: Roboto;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      padding-bottom: 10px;
+    }
+  }

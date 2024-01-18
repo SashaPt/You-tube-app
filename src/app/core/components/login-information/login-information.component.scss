@@ -1,0 +1,28 @@
+.header_login {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  .header_login_name {
+    width: 102px;
+    height: 15px;
+    flex-shrink: 0;
+    color: #4f4f4f;
+    text-align: right;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .header_login_avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    box-shadow: 2px 0px 4px 0px #2f80ed;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,4 @@
+<app-sorting *ngIf="openSorting && results"></app-sorting>
+<div class="search_results" *ngIf="results">
+  <app-search-item *ngFor="let item of results | filter: filterString | orderBy: sortByDate | sortBy: sortByView" [item]="item"></app-search-item>
+</div>

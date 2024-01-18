@@ -1,0 +1,48 @@
+<div class="card_container" *ngIf="item">
+  <app-button
+    [type]="'button'"
+    [disabled]="false"
+    (click)="this.location.back()"
+    [appSetColor]="date"
+  >
+    <img src="assets/img/back.png" alt="arrow back" />
+  </app-button>
+  <div class="card_content">
+    <div class="card_video">
+      <img [src]="item.snippet.thumbnails.high.url" alt="thumbnails" />
+    </div>
+    <div class="card_details">
+      <div class="card_top">
+        <h1 class="card_title">{{ item.snippet.title }}</h1>
+        <p class="card_date">
+          {{ item.snippet.publishedAt | date : "fullDate" }}
+        </p>
+      </div>
+      <div class="card_description">
+        <p class="card_description_subtitle">Description:</p>
+        <p class="card_description_text">
+          {{ item.snippet.description }}
+        </p>
+      </div>
+      <div class="card_statistics">
+        <div class="card_info">
+          <img src="assets/img/viewed.svg" alt="viewed" class="icon" />
+          <span class="count">{{ item.statistics.viewCount }}</span>
+        </div>
+        <div class="card_info">
+          <img src="assets/img/liked.svg" alt="liked" class="icon" />
+          <span class="count">{{ item.statistics.likeCount }}</span>
+        </div>
+        <div class="card_info">
+          <img src="assets/img/dislike.svg" alt="disliked" class="icon" />
+          <span class="count">{{ item.statistics.dislikeCount }}</span>
+        </div>
+        <div class="card_info">
+          <img src="assets/img/commented.svg" alt="commented" class="icon" />
+          <span class="count">{{ item.statistics.commentCount }}</span>
+        </div>
+      </div>
+      <div class="card_bottom" [appSetColor]="date"></div>
+    </div>
+  </div>
+</div>

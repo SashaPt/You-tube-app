@@ -1,0 +1,9 @@
+.search_results {
+    width: 1200px;
+    padding: 31px 28px 29px 31px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 28px;
+    row-gap: 29px;
+}

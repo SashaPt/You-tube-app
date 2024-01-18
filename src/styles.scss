@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button,
+option {
+  outline: none;
+  appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background-color: transparent;
+  border-radius: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+app-button {
+  background: #2f80ed;
+  box-shadow: 2px 0px 4px 0px #2f80ed;
+  transition: 0.3s ease-out;
+  &:hover {
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,122 @@
+<div class="create-card_container">
+  <p class="create-card_subheader">Create new card</p>
+  <form
+    [formGroup]="createCardForm"
+    (ngSubmit)="onSubmit()"
+    (reset)="onReset()"
+    class="create-card_form form"
+  >
+    <div class="form-control_wrapper">
+      <label for="admin-title">Title</label>
+      <input
+        type="text"
+        name="admin-title"
+        id="admin-title"
+        required
+        formControlName="title"
+      />
+      <div
+        *ngIf="title?.invalid && (title?.dirty || title?.touched)"
+        class="error-message"
+      >
+        <div *ngIf="title?.errors?.['required']">Please enter a title</div>
+        <div *ngIf="title?.errors?.['minlength']">The title is too short</div>
+        <div *ngIf="title?.errors?.['maxlength']">The title is too long</div>
+      </div>
+    </div>
+    <div class="form-control_wrapper">
+      <label for="admin-description">Discription</label>
+      <input
+        type="text"
+        name="admin-description"
+        id="admin-description"
+        formControlName="description"
+      />
+      <div
+        *ngIf="
+          description?.invalid && (description?.dirty || description?.touched)
+        "
+        class="error-message"
+      >
+        <div *ngIf="description?.errors?.['maxlength']">
+          The description is too long
+        </div>
+      </div>
+    </div>
+    <div class="form-control_wrapper">
+      <label for="admin-img">Img</label>
+      <input
+        type="text"
+        name="admin-img"
+        id="admin-img"
+        required
+        formControlName="img"
+      />
+      <div
+        *ngIf="img?.invalid && (img?.dirty || img?.touched)"
+        class="error-message"
+      >
+        <div *ngIf="img?.errors?.['required']">
+          Please enter a link to the image
+        </div>
+      </div>
+    </div>
+    <div class="form-control_wrapper">
+      <label for="admin-video">Link video</label>
+      <input
+        type="text"
+        name="admin-video"
+        id="admin-video"
+        required
+        formControlName="video"
+      />
+      <div
+        *ngIf="video?.invalid && (video?.dirty || video?.touched)"
+        class="error-message"
+      >
+        <div *ngIf="video?.errors?.['required']">
+          Please enter a link to the video
+        </div>
+      </div>
+    </div>
+    <div class="form-control_wrapper">
+      <label for="admin-date">Creation date</label>
+      <input
+        type="date"
+        name="admin-date"
+        id="admin-date"
+        required
+        formControlName="date"
+      />
+      <div
+        *ngIf="date?.invalid && (date?.dirty || date?.touched)"
+        class="error-message"
+      >
+        <div *ngIf="date?.errors?.['required']">
+          Please enter a creation date
+        </div>
+        <div *ngIf="date?.errors?.['futureDate']">The date is invalid</div>
+      </div>
+    </div>
+    <div class="form_subform">
+      <div class="form-control_wrapper">
+        <label for="admin-tags">Tag</label>
+        <ng-container formArrayName="tags">
+          <ng-container *ngFor="let tagsForm of tags.controls; let i = index">
+            <div class="form-control_row" [formGroupName]="i">
+              <input type="text" formControlName="tag" required>
+              <button class="delete-btn" (click)="deleteTag(i)">X</button>
+            </div>
+        </ng-container>
+        </ng-container>
+      </div>
+      <app-button [type]="'button'" [disabled]="false" (click)="addTag()">Add tag</app-button>
+    </div>
+    <div class="form_buttons">
+      <app-button [type]="'reset'" [disabled]="false">Reset</app-button>
+      <app-button [type]="'submit'" [disabled]="!createCardForm.valid"
+        >Create card</app-button
+      >
+    </div>
+  </form>
+</div>

@@ -1,0 +1,60 @@
+.login_container {
+  width: 344px;
+  margin: 45px auto;
+  background: #f2f2f2;
+  border-radius: 5px;
+  padding: 28px 20px 24px;
+  .login_subheader {
+    color: #000;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .login_form {
+    margin-top: 11px;
+  }
+  .form-control_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    &:not(:last-of-type) {
+      margin-bottom: 4px;
+    }
+    label {
+      color: #828282;
+      font-family: Roboto;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-left: 6px;
+    }
+    input {
+      background: #e0e0e0;
+      color: #000;
+      font-family: Roboto;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      padding: 13px 8px;
+    }
+  }
+  app-button {
+    width: 124px;
+    height: 30px;
+    display: block;
+    margin-left: auto;
+    margin-top: 22px;
+    border-radius: 5px;
+  }
+}
+input.ng-invalid.ng-touched,
+input.ng-invalid.ng-dirty {
+  border: 1px solid red;
+}
+.error-message {
+  color: red;
+}

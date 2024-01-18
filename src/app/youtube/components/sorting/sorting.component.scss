@@ -1,0 +1,58 @@
+.sorting_block {
+  width: 100%;
+  height: 50px;
+  background: #e5e5e5;
+  .sorting_container {
+    width: 100%;
+    height: 100%;
+    max-width: 1128px;
+    margin: 0 auto;
+    padding-left: 276px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+  .sorting_name {
+    color: #929292;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .sorting_items {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+  }
+  .sorting_item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .sorting_item button {
+    color: #2f80ed;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    text-decoration-line: underline;
+  }
+  #sorting_input {
+    width: 149px;
+    height: 13px;
+    background: #fff;
+    color: #4f4f4f;
+    padding: 0 3px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    &::placeholder {
+      color: #929292;
+    }
+  }
+}
