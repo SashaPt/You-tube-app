@@ -1,6 +1,6 @@
 # YouTube App
 
-App for searching videos from YouTube. <a href="https://sashapt.github.io/You-tube-App/">View Deployment</a>.
+App for searching videos from YouTube. <a href="https://sashapt.github.io/You-tube-App/auth">View Deployment</a>.
 
 ### Details:
 - Search panel;
