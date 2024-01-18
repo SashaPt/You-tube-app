@@ -6,7 +6,7 @@ App for searching videos from YouTube. <a href="https://sashapt.github.io/You-tu
 - Search panel;
 - Filtering and sorting options;
 - Video's card;
-- Login/logout (fake);
+- Login/logout (fake, login: user@login.com, password: User_Password1);
 - Admin page (fake);
 
 ### Development
